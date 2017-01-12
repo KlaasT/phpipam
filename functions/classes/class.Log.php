@@ -1520,7 +1520,7 @@ class Logging extends Common_functions {
 		$this->object_type = str_replace("ip_range", "address range", $this->object_type);
 
 		# folder
-		if ( $this->object_new['isFolder']=="1"	|| $this->object_old['isFolder']=="1")	{ $this->object_type = "folder"; }
+		if ( $this->object_new['isFolder'] or $this->object_old['isFolder'])	{ $this->object_type = "folder"; }
 
 		# set subject
 		$subject = string;
